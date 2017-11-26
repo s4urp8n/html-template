@@ -3,6 +3,8 @@
 @import "Roboto";
 @import "RobotoCondensed";
 @import "OpenSans";
+@import "ionicons";
+@import "line-awesome";
 
 html,
 body {
@@ -60,7 +62,6 @@ body {
     justify-content: center;
     width: 100%;
   }
-
   &-container {
     @include reset;
     max-width: $maxContainerWidth;
@@ -72,16 +73,82 @@ body {
 }
 
 .header {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  background: grey;
   &-logo {
-
-  }
-  &-menu {
-
+    background: red;
+    flex: 1;
+    width: 100%;
+    min-width: 250px;
+    &-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
   }
   &-contacts {
-
+    flex: 1;
+    background: orange;
+    text-align: right;
+    line-height: 1.2;
+    &-phone {
+      display: block;
+      font-size: 235%;
+      text-decoration: none;
+      white-space: nowrap;
+      color: #000;
+      font-weight: 300;
+    }
+    &-email,
+    &-map {
+      white-space: nowrap;
+      text-decoration: none;
+      display: block;
+      color: #000;
+      font-size: 80%;
+    }
+    &-map {
+      span {
+        color: #f00;
+      }
+    }
+    &-email {
+      span {
+        color: #00f;
+      }
+    }
   }
   &-search {
-
+    flex: 1;
+    text-align: center;
+    background: lightcoral;
+    padding-right: $containerPadding/2;
+    padding-left: $containerPadding/2;
+  }
+  &-menu {
+    @include reset;
+    padding-top: $containerPadding/2;
+    width: 100%;
+    background: orangered;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &-item {
+      display: inline-block;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 120%;
+      text-decoration: none;
+      padding: 5px 10px;
+      color: #000;
+      background: green;
+      flex: 1;
+    }
   }
 }
