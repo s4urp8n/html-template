@@ -1,0 +1,132 @@
+.footer {
+  border-top: 1px solid $headerFooterBorderColor;
+  background: $transparentColor;
+}
+
+.footer-questions {
+  @include reset;
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: $containerPadding;
+  &-question {
+    font-size: 28pt;
+    @include reset;
+    text-align: center;
+  }
+  &-phone {
+    @include reset;
+    font-size: 40pt;
+    text-align: center;
+    text-decoration: none;
+    color: $phoneColor;
+  }
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  .footer-nav {
+    @include reset;
+    padding: $containerPadding;
+    padding-bottom: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    .footer-nav-item {
+      flex-grow: 1;
+      flex-shrink: 1;
+      text-align: center;
+      padding: 10px;
+      text-decoration: none;
+      font-size: 14pt;
+      color: #000;
+      &:hover {
+        background: $greyColor;
+      }
+      &--active,
+      &--active:hover {
+        background: #000;
+        color: #fff;
+      }
+    }
+  }
+  .footer-text {
+    @include reset;
+    padding: $containerPadding;
+    flex: 1;
+  }
+  .footer-pay {
+    @include reset;
+    padding: $containerPadding;
+    flex: 1;
+    max-width: 240px+$containerPadding;
+    min-width: 240px+$containerPadding;
+    width: 240px+$containerPadding;
+    &-img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .footer-social {
+    @include reset;
+    padding: $containerPadding;
+    flex: 1;
+    max-width: 200px;
+    width: 200px;
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    &-link {
+      display: flex;
+      @include reset;
+      flex-grow: 1;
+      flex-shrink: 0;
+      text-decoration: none;
+      color: #000000;
+      transition: all 0.2s ease-in;
+      text-align: left;
+      padding: 5px;
+      margin: 5px 0;
+      font-size: 14pt;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      i {
+        font-size: 16pt;
+      }
+      &:hover {
+        background: $greyColor;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-info {
+    justify-content: space-between;
+    align-items: flex-start;
+    .footer-nav {
+      display: none;
+    }
+    .footer-text {
+      padding-bottom: 0;
+      flex: 0 0 100%;
+    }
+  }
+}
+
