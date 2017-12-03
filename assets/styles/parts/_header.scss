@@ -136,25 +136,9 @@
       order: 4;
       justify-content: center;
       align-items: center;
-      &-item {
-        flex-basis: 10%;
-      }
     }
     &-contacts {
       order: 2;
-    }
-  }
-}
-
-@media (max-width: 1000px) {
-  .header {
-    &-menu {
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-      &-item {
-        flex-basis: 20%;
-      }
     }
   }
 }
@@ -164,6 +148,10 @@
     justify-content: center;
     &-logo {
       flex: 0 0 100%;
+    }
+    &-menu {
+      justify-content: flex-start;
+      align-items: center;
     }
     &-search {
       display: none;

@@ -3,77 +3,39 @@
   background: $transparentColor;
 }
 
-.footer-questions {
-  @include reset;
-  display: flex;
-  flex-shrink: 0;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: $containerPadding;
-  &-question {
-    font-size: 28pt;
-    @include reset;
-    text-align: center;
-  }
-  &-phone {
-    @include reset;
-    font-size: 40pt;
-    text-align: center;
-    text-decoration: none;
-    color: $phoneColor;
-  }
-}
-
 .footer-info {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
-  .footer-nav {
+  .footer-text {
     @include reset;
-    padding: $containerPadding;
-    padding-bottom: 0;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 100%;
+    flex: 1;
+    padding: 0 $containerPadding*2 0 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    .footer-nav-item {
-      flex-grow: 1;
-      flex-shrink: 1;
-      text-align: center;
-      padding: 10px;
-      text-decoration: none;
-      font-size: 14pt;
-      color: #000;
-      &:hover {
-        background: $greyColor;
-      }
-      &--active,
-      &--active:hover {
-        background: #000;
-        color: #fff;
-      }
+    &-text {
+      @include reset;
+      flex: 1;
+      font-size: 12pt;
     }
-  }
-  .footer-text {
-    @include reset;
-    padding: $containerPadding;
-    flex: 1;
+    .header-contacts {
+      text-align: left;
+      order: 2;
+      padding: 0 0 0 $containerPadding*2;
+    }
   }
   .footer-pay {
     @include reset;
-    padding: $containerPadding;
     flex: 1;
-    max-width: 240px+$containerPadding;
-    min-width: 240px+$containerPadding;
-    width: 240px+$containerPadding;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 240px;
+    min-width: 240px;
+    width: 240px;
     &-img {
       width: 100%;
       height: auto;
@@ -81,8 +43,11 @@
   }
   .footer-social {
     @include reset;
-    padding: $containerPadding;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     flex: 1;
+    padding: 0 $containerPadding*2 0 0;
     max-width: 200px;
     width: 200px;
     min-width: 200px;
@@ -97,7 +62,7 @@
       flex-shrink: 0;
       text-decoration: none;
       color: #000000;
-      transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in-out;
       text-align: left;
       padding: 5px;
       margin: 5px 0;
@@ -116,17 +81,71 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .footer-info {
-    justify-content: space-between;
-    align-items: flex-start;
-    .footer-nav {
-      display: none;
-    }
     .footer-text {
-      padding-bottom: 0;
-      flex: 0 0 100%;
+      .header-contacts {
+        display: none;
+      }
     }
+  }
+}
+
+@media (max-width: 800px) {
+  .footer-info {
+    .footer-text {
+      order: 3;
+      flex: 0 0 100%;
+      padding-top: $containerPadding;
+    }
+  }
+}
+
+.footer-partners {
+  @include reset;
+  padding: $containerPadding*2 $containerPadding;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  flex-grow: 1;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  &-caption {
+    font-size: 24pt;
+    flex: 0 0 100%;
+    text-align: center;
+    font-weight: 700;
+  }
+  &-item {
+    flex: 1 0 25%;
+    text-align: center;
+    &-img {
+      opacity: 0.5;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 270px;
+      min-width: 120px;
+      padding: 20px;
+      height: auto;
+      transition: all 0.2s ease-in-out;
+      display: inline-block;
+      margin: auto;
+    }
+    &:hover {
+      .footer-partners-item-img {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-partners {
+    display: none;
   }
 }
 
