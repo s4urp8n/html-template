@@ -10,7 +10,7 @@ $(document).ready(function () {
                 {src: slidesRoot + '6.jpg'},
                 {src: slidesRoot + '7.jpg'}
             ],
-            overlay: true,
+            overlay: false,
             shuffle: false,
             delay: 15000
         });

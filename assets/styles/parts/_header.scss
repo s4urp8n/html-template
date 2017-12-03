@@ -15,6 +15,8 @@
   flex-shrink: 0;
   flex-direction: row;
   flex-wrap: wrap;
+  flex-grow: 1;
+  flex-basis: 100%;
   width: 100%;
   align-items: center;
   background: $transparentColor;
@@ -22,8 +24,7 @@
   position: relative;
   &-logo {
     flex: 1;
-    width: 100%;
-    min-width: 250px;
+    min-width: 300px;
     max-width: 400px;
     &-img {
       width: 100%;
@@ -37,11 +38,11 @@
     line-height: 1.2;
     &-phone {
       display: block;
-      font-size: 235%;
+      font-size: 210%;
       text-decoration: none;
       white-space: nowrap;
       color: $phoneColor;
-      font-weight: 300;
+      font-weight: 700;
     }
     &-email,
     &-map {
@@ -55,10 +56,9 @@
   &-search {
     flex: 1;
     text-align: center;
-    padding-right: $containerPadding*4;
-    padding-left: $containerPadding*4;
+    padding-right: $containerPadding;
+    padding-left: $containerPadding;
     display: flex;
-    flex-shrink: 0;
     font-size: 80%;
     transition: all 0.3s ease-in-out;
     flex-direction: row;
@@ -145,17 +145,20 @@
 
 @media (max-width: 900px) {
   .header {
+    padding: $containerPadding/2;
     justify-content: center;
     &-logo {
       flex: 0 0 100%;
     }
     &-menu {
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
+      &-item {
+        flex: 1;
+        flex-basis: 30%;
+      }
     }
-    &-search {
-      display: none;
-    }
+    &-search,
     &-contacts {
       display: none;
     }
