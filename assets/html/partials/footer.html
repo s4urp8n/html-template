@@ -11,15 +11,12 @@
             </p>
 
             <div class="footer-social footer-social--menu">
-                <a href="/" class="footer-social-link footer-social-link--active">Главная</a>
-                <a href="#" class="footer-social-link">Каталог</a>
-                <a href="#" class="footer-social-link">Галерея</a>
-            </div>
-
-            <div class="footer-social footer-social--menu">
-                <a href="#" class="footer-social-link">Отзывы</a>
-                <a href="#" class="footer-social-link">Новости</a>
-                <a href="#" class="footer-social-link">Контакты</a>
+                {{#each menu}}
+                <a href="/{{this.url}}.html"
+                   class="footer-social-link {{#ifpage this.url}}footer-social-link--active{{/ifpage}}">
+                    {{this.name}}
+                </a>
+                {{/each}}
             </div>
 
             <a class="footer-pay" target="_blank" href="http://tochka.com/my/02b1ccac59ff43f49be7f5466a51d31e">

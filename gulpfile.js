@@ -101,6 +101,7 @@ gulp.task('refresh', ['default'], function () {
 
 gulp.task('watch', ['default'], function () {
     gulp.watch([
+        mapFile,
         'assets/**/*.js',
         'assets/**/*.html',
         'assets/**/*.scss',

@@ -7,8 +7,29 @@ body {
   background: none;
 }
 
-* {
-  font-family: $defaultFontFamily;
+body {
+  background-image: url('/assets/images/slides/2.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
   font-size: 100%;
+  font-family: $defaultFontFamily;
+}
+
+.delay1 {
+  @include delay;
+}
+
+.delay2 {
+  @include delay(2);
+}
+
+.delay3 {
+  @include delay(3);
+}
+
+.delay4 {
+  @include delay(4);
 }
 

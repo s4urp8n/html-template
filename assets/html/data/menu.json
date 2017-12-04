@@ -1,26 +1,26 @@
 [
   {
     "name": "Главная",
-    "url": "/index.html"
+    "url": "index"
   },
   {
     "name": "Каталог",
-    "url": "/catalog.html"
+    "url": "catalog"
   },
   {
     "name": "Галерея",
-    "url": "/gallery.html"
+    "url": "gallery"
   },
   {
     "name": "Отзывы",
-    "url": "/reviews.html"
+    "url": "reviews"
   },
   {
     "name": "Новости",
-    "url": "/news.html"
+    "url": "news"
   },
   {
     "name": "Контакты",
-    "url": "/contacts.html"
+    "url": "contacts"
   }
 ]

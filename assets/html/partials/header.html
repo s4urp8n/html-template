@@ -25,13 +25,12 @@
 
         <div class="header-menu">
             {{#each menu}}
-            <a href="{{this.url}}"
-               class="header-menu-item">
+            <a href="/{{this.url}}.html"
+               class="header-menu-item {{#ifpage this.url}}header-menu-item--active{{/ifpage}}">
                 {{this.name}}
             </a>
             {{/each}}
         </div>
-
 
     </div>
 </div>

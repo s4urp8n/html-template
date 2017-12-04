@@ -72,10 +72,22 @@
       flex-wrap: wrap;
       align-items: flex-start;
       justify-content: flex-start;
+      max-width: 100%;
       .footer-social-link {
         text-align: center;
         font-weight: 700;
         text-transform: uppercase;
+        flex: 1;
+        flex-basis: 50%;
+        width: 50%;
+        &:hover {
+          background: $greyColor;
+        }
+        &--active,
+        &--active:hover {
+          background: #000;
+          color: #fff;
+        }
       }
     }
   }
