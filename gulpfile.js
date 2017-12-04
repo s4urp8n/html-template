@@ -33,10 +33,6 @@ function getVersion() {
     return fs.readFileSync(versionFile, 'utf-8');
 }
 
-function say(text) {
-    console.log(text);
-}
-
 gulp.task('clean', function () {
     if (fs.existsSync(buildDirectory)) {
         return gulp.src([buildDirectory + '/*.*'])
@@ -79,7 +75,6 @@ gulp.task('compile', ['updateVersion'], function () {
     }
 });
 
-
 gulp.task('compileHtmlData', ['compile'], function () {
 
     var assetsData = "assets/html/data/assets.json";
@@ -91,7 +86,7 @@ gulp.task('compileHtmlData', ['compile'], function () {
 gulp.task('default', ['compileHtmlData'], function () {
     gulp.src('assets/html/*.html')
         .pipe(panini({
-            root: 'build',
+            root: './',
             layouts: 'assets/html/layouts',
             data: 'assets/html/data',
             partials: 'assets/html/partials'
@@ -99,16 +94,18 @@ gulp.task('default', ['compileHtmlData'], function () {
         .pipe(gulp.dest('./'));
 });
 
+gulp.task('refresh', ['default'], function () {
+    panini.refresh();
+});
+
+
 gulp.task('watch', ['default'], function () {
-
-    var watches = [
-        mapFile,
-        "gulpfile.js",
-        "assets/**"
-    ];
-
-    gulp.watch(watches, ['default']);
-
+    gulp.watch([
+        'assets/**/*.js',
+        'assets/**/*.html',
+        'assets/**/*.scss',
+        'assets/**/*.css'
+    ], ['refresh'])
 });
 
 

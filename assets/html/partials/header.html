@@ -24,12 +24,12 @@
         </div>
 
         <div class="header-menu">
-            <a href="/" class="header-menu-item header-menu-item--active">Главная</a>
-            <a href="#" class="header-menu-item">Каталог</a>
-            <a href="#" class="header-menu-item">Галерея</a>
-            <a href="#" class="header-menu-item">Отзывы</a>
-            <a href="#" class="header-menu-item">Новости</a>
-            <a href="#" class="header-menu-item">Контакты</a>
+            {{#each menu}}
+            <a href="{{this.url}}"
+               class="header-menu-item">
+                {{this.name}}
+            </a>
+            {{/each}}
         </div>
 
 

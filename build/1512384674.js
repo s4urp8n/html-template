@@ -7,5 +7,4 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
 //# sourceMappingURL=vegas.min.js.map
 
 
-$(document).ready(function(){$(function(){var slidesRoot='/assets/images/slides/';$('body').vegas({slides:[{src:slidesRoot+'2.jpg'},{src:slidesRoot+'6.jpg'},{src:slidesRoot+'7.jpg'}],overlay:false,shuffle:false,delay:15000});});$('.header-menu-item').on('click',function(event){$('.header-menu-item').removeClass('header-menu-item--active');$(this).addClass('header-menu-item--active');if($(this).attr('href')=='#'){$('.page').removeClass('page--home');}else{$('.page').addClass('page--home');}
-event.preventDefault();});});
+$(document).ready(function(){$(function(){var slidesRoot='/assets/images/slides/';$('body').vegas({slides:[{src:slidesRoot+'2.jpg'},{src:slidesRoot+'6.jpg'},{src:slidesRoot+'7.jpg'}],overlay:true,shuffle:false,delay:15000});});});
