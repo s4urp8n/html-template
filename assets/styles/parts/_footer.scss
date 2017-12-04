@@ -41,7 +41,7 @@
     max-width: 200px;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
     flex-direction: column;
     &-link {
       display: flex;
@@ -80,6 +80,7 @@
         flex: 1;
         flex-basis: 50%;
         width: 50%;
+        max-width: 50%;
         &:hover {
           background: $greyColor;
         }
