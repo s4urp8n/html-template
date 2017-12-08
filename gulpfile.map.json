@@ -3,6 +3,7 @@
     "assets/styles/style.scss"
   ],
   "--version--.js": [
-    "assets/scripts/jquery-3.2.1.min.js"
+    "assets/scripts/jquery-3.2.1.min.js",
+    "assets/scripts/script.js"
   ]
 }

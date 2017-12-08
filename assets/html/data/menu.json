@@ -5,7 +5,11 @@
   },
   {
     "name": "Каталог",
-    "url": "catalog"
+    "url": "catalog-brus"
+  },
+  {
+    "name": "О компании",
+    "url": "company"
   },
   {
     "name": "Отзывы",

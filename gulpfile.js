@@ -85,10 +85,12 @@ gulp.task('compileHtmlData', ['compile'], function () {
 
 gulp.task('default', ['compileHtmlData'], function () {
     gulp.src('assets/html/*.html')
+        .pipe(plumber())
         .pipe(panini({
             root: './',
             layouts: 'assets/html/layouts',
             data: 'assets/html/data',
+            helpers: 'assets/html/helpers',
             partials: 'assets/html/partials'
         }))
         .pipe(gulp.dest('./'));
@@ -103,6 +105,8 @@ gulp.task('watch', ['default'], function () {
     gulp.watch([
         mapFile,
         'assets/**/*.js',
+        'assets/**/*.json',
+        '!assets/**/assets.json',
         'assets/**/*.html',
         'assets/**/*.scss',
         'assets/**/*.css'

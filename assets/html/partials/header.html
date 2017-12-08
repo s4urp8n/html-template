@@ -26,7 +26,7 @@
         <div class="header-menu">
             {{#each menu}}
             <a href="/{{this.url}}.html"
-               class="header-menu-item {{#ifpage this.url}}header-menu-item--active{{/ifpage}}">
+               class="header-menu-item {{#ifpagestarts this.url }} header-menu-item--active {{/ifpagestarts}}">
                 {{this.name}}
             </a>
             {{/each}}

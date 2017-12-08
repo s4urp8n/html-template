@@ -13,7 +13,7 @@
             <div class="footer-social footer-social--menu">
                 {{#each menu}}
                 <a href="/{{this.url}}.html"
-                   class="footer-social-link {{#ifpage this.url}}footer-social-link--active{{/ifpage}}">
+                   class="footer-social-link {{#ifpagestarts this.url}}footer-social-link--active{{/ifpagestarts}}">
                     {{this.name}}
                 </a>
                 {{/each}}

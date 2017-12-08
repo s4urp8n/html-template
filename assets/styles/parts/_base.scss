@@ -33,3 +33,16 @@ body {
   @include delay(4);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include reset;
+  margin-bottom: $containerPadding/2;
+}
+
+h1 {
+  text-transform: uppercase;
+}
