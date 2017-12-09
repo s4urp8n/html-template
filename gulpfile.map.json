@@ -4,6 +4,7 @@
   ],
   "--version--.js": [
     "assets/scripts/jquery-3.2.1.min.js",
+    "assets/scripts/jquery.photobox.js",
     "assets/scripts/script.js"
   ]
 }
