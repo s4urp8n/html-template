@@ -2,96 +2,129 @@
   border-top: 1px solid $headerFooterBorderColor;
   background: $transparentColor;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-start;
   .footer-text {
     @include reset;
-    flex: 2;
+    padding: $containerPadding 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    font-size: 10pt;
-  }
-  .footer-pay {
-    @include reset;
-    flex: 1;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    text-align: center;
-    &-img {
-      max-width: 240px;
-      min-width: 200px;
+    font-size: 12pt;
+    width: 100%;
+    justify-content: space-between;
+    &-left {
+      flex: 0 0 50%;
+    }
+    &-right {
+      flex: 0 0 50%;
+      text-align: right;
+    }
+    p {
+      @include reset;
+      display: block;
       width: 100%;
-      height: auto;
-      margin: auto;
+      margin-bottom: 3px;
     }
   }
   .footer-social {
     @include reset;
+    flex: 1 1 auto;
+    width: 100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    flex: 1;
-    max-width: 200px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 15px 0;
     &-link {
       display: flex;
       @include reset;
-      flex: 0 0 100%;
+      flex: 1 1 20%;
+      max-width: 20%;
       text-decoration: none;
       color: #000000;
       transition: all 0.2s ease-in-out;
-      text-align: right;
-      padding: 5px;
-      margin: 5px 0;
-      font-size: 10pt;
+      text-align: left;
+      padding: 10px;
+      font-size: 12pt;
       flex-direction: row;
       flex-wrap: nowrap;
-      justify-content: center;
-      align-items: center;
+      justify-content: flex-start;
+      align-items: flex-start;
+      white-space: nowrap;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
       i {
         font-size: 16pt;
       }
       &:hover {
         background: $greyColor;
       }
-    }
-  }
-  & > * {
-    padding: 0 $containerPadding/3 !important;
-  }
-  & > *:first-child {
-    padding-left: 0 !important;
-  }
-  & > *:last-child {
-    padding-right: 0 !important;
-  }
-}
-
-@media (max-width: 1200px) {
-  .footer-info {
-    .footer-social.footer-social--menu {
-      display: none;
+      &--active:hover,
+      &--active {
+        background: #000;
+        color: #fff;
+      }
     }
   }
 }
 
-@media (max-width: 900px) {
-  .footer-info {
-    .footer-pay,
+@media (max-width: 1300px) {
+  .footer {
     .footer-social {
-      display: none;
+      &-link {
+        flex: 1 1 25%;
+        max-width: 25%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .footer {
+    .footer-social {
+      &-link {
+        flex: 1 1 33%;
+        max-width: 33%;
+      }
     }
     .footer-text {
-      flex: 0 0 100%;
-      padding: 0 !important;
+      &-left {
+        flex: 0 0 100%;
+      }
+      &-right {
+        flex: 0 0 100%;
+        text-align: left;
+      }
     }
   }
 }
 
+@media (max-width: 800px) {
+  .footer {
+    .footer-social {
+      &-link {
+        flex: 1 1 50%;
+        max-width: 50%;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .footer {
+    .footer-social {
+      &-link {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}

@@ -58,13 +58,12 @@ gulp.task('compile', ['updateVersion'], function () {
         for (var partFile in sourceMap[outputFileName]) {
             outputStream.queue(gulp.src(sourceMap[outputFileName][partFile], {buffer: true})
                 .pipe(plumber())
-                .pipe(gulpIf(['*.js', '!*.min.js'], jsmin()))
+                // .pipe(gulpIf(['*.js', '!*.min.js'], jsmin()))
                 .pipe(gulpIf(['*.sass', '*.scss'], sass()))
                 .pipe(gulpIf(['*.sass', '*.scss'], autoprefixer({browsers: ['last 2 versions'], cascade: false})))
-                .pipe(gulpIf(['*.sass', '*.scss'], cssmin()))
-                .pipe(gulpIf(['*.less'], autoprefixer({browsers: ['last 2 versions'], cascade: false})))
+                // .pipe(gulpIf(['*.sass', '*.scss'], cssmin()))
                 .pipe(gulpIf(['*.css', '!*.min.css'], autoprefixer({browsers: ['last 2 versions'], cascade: false})))
-                .pipe(gulpIf(['*.css', '!*.min.css'], cssmin()))
+                // .pipe(gulpIf(['*.css', '!*.min.css'], cssmin()))
             );
         }
 

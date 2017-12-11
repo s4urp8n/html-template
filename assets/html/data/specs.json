@@ -4,14 +4,16 @@
     "length": "12,5",
     "gost": "51685-2000",
     "weightT": "0,6475",
-    "weightM": "51,72"
+    "weightM": "51,72",
+    "img": "p50.jpg"
   },
   {
     "name": "Рельсы Р-65",
     "length": "12,5",
     "gost": "51685-2000",
     "weightT": "0,822",
-    "weightM": "64,78"
+    "weightM": "64,78",
+    "img": "p65.jpg"
   },
   {
     "name": "Рельсы РП-50",
@@ -25,7 +27,8 @@
     "length": "12,5",
     "gost": "7173-54,4224-54",
     "weightT": "0,548",
-    "weightM": "45,72"
+    "weightM": "45,72",
+    "img": "p43.jpg"
   },
   {
     "name": "Рельсы Р-33",
@@ -67,28 +70,32 @@
     "length": "11",
     "gost": "ДСТУ 2484-94",
     "weightT": "1,272",
-    "weightM": "115,73"
+    "weightM": "115,73",
+    "img": "kr120.png"
   },
   {
     "name": "Рельсы КР-100",
     "length": "11",
     "gost": "ДСТУ 2484-94",
     "weightT": "0,91",
-    "weightM": "85,64"
+    "weightM": "85,64",
+    "img": "kr100.png"
   },
   {
     "name": "Рельсы КР-80",
     "length": "11",
     "gost": "ДСТУ 2484-94",
     "weightT": "0,657",
-    "weightM": "59,83"
+    "weightM": "59,83",
+    "img": "kr80.jpg"
   },
   {
     "name": "Рельсы КР-70",
     "length": "11",
     "gost": "4121-96",
     "weightT": "0.528",
-    "weightM": "48"
+    "weightM": "48",
+    "img": "kr70.png"
   },
   {
     "name": "Рельсы Т-62",
@@ -186,21 +193,24 @@
     "length": "",
     "gost": "8194-75,3280-84",
     "weightT": "7,74",
-    "weightM": "129"
+    "weightM": "129",
+    "img": "d65.jpg"
   },
   {
     "name": "Подкладка Д-50",
     "length": "",
     "gost": "12135-75",
     "weightT": "6,32",
-    "weightM": "164"
+    "weightM": "164",
+    "img": "d50.jpg"
   },
   {
     "name": "Подкладка Д-43",
     "length": "",
     "gost": "7056-77",
     "weightT": "5,31",
-    "weightM": "194"
+    "weightM": "194",
+    "img": "d43.jpg"
   },
   {
     "name": "Подкладка для Р-33",
@@ -235,7 +245,8 @@
     "length": "",
     "gost": "8194-75, 3280-84",
     "weightT": "7,25",
-    "weightM": "143"
+    "weightM": "143",
+    "img": "cd65.jpg"
   },
   {
     "name": "Подкладка СД-50 (стрел.пер.)",
@@ -249,14 +260,16 @@
     "length": "",
     "gost": "ТУ 14-2Р-294-2005",
     "weightT": "7.21",
-    "weightM": "155"
+    "weightM": "155",
+    "img": "kb65.jpg"
   },
   {
     "name": "Подкладка КБ-50",
     "length": "",
     "gost": "ТУ 14-2Р-294-2005",
     "weightT": "6,92",
-    "weightM": "151"
+    "weightM": "151",
+    "img": "kb65.jpg"
   },
   {
     "name": "Подкладка КД-65",

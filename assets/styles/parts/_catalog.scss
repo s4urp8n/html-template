@@ -53,6 +53,15 @@
           background: none;
         }
       }
+      &-aimg {
+        img {
+          display: block;
+          width: 100%;
+          max-width: 100px;
+          height: auto;
+          margin: auto;
+        }
+      }
     }
   }
 }
